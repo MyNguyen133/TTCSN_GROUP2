@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNFOODS</title>
+    <style>
+        #header{
+            height: 300px;
+            width: 100%;
+            background-image: url(nen_header.png) ;
+            background-attachment: fixed;
+            background-position: center;
+        }
+
+        #header .header1{
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            background-color: rgb(232, 232, 232);
+            color: rgb(0, 0, 0);
+        }
+
+        #header .header2 h2{
+            padding-top: 15%;
+            font-size: 25px;
+            font-family:cursive;
+            letter-spacing: 2px;
+        
+        }
+
+        #map {
+            position: relative;
+            width: 100%;
+        }
+        .marker {
+            position: absolute;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .marker:hover .marker-popup {
+            display: block;
+            width: 100px;
+        }
+        .marker .marker-popup a{
+            text-decoration: none;
+            color: black;
+            font-size: 13px;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        .marker .marker-popup a:hover{
+            font-size: 25px;
+            
+        }
+
+
+        #footer{
+            clear: both;
+            width: 100%;
+            box-sizing: border-box;
+            box-sizing: 100%;
+        }
+
+        #footer .footer1{
+           float: left;
+           width: 100%;
+           background-color: rgb(215, 215, 215);
+        }
+       
+     
+        #header .footer2 ul{
+            list-style-type: none;
+            padding-top: 0%;
+            margin-top: -3.7%;
+            padding-left: 23%;
+            font-weight: bold;
+            font-size: 18px;
+            
+        }
+        #header .footer2 li{
+            line-height: 30px;
+            margin-left: 10%;
+            padding-left: 2%;
+            display: inline;
+        }
+
+        #header .footer2 a{
+            text-decoration: none;
+            color: rgb(62, 60, 60);
+        }
+
+
+        #header .footer2 a:hover{
+            color: orangered;
+            text-decoration: underline;
+        }
+
+        
+        .header2 h2 {
+            text-align: center;
+           
+        }
+        .header1 p{
+            color: rgb(47, 155, 126);
+            font-weight: bold;
+        }
+
+        .footer1 h3{
+            margin-left: 15%;
+            
+        }
+        .footer1 p{
+            margin-left: 15%;
+            font-weight: 300;
+        }
+       
+
+
+    </style>
+</head>
+
+
+<body>
+    <div id = "header">
+        <div class="header1" style="">
+            <img src="Logo.png" alt="logo" width="60px" style="float: left; padding-left: 5%; padding-top: 1%;">
+            <p style="padding-top: 0.5%; padding-left: 12%; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 20px;">VNFOODS</p>
+            <div class="footer2">
+                    <ul>
+                        <li><a href="">TRANG CHỦ</a></li>
+                        <li><a href="Gioi_Thieu.html">GIỚI THIỆU</a></li>
+                        <li><a href="Lien_He.html">LIÊN HỆ</a></li>
+                        <li><a href="Huong_Dan.html">HƯỚNG DẪN</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="header2">
+            <h2>Mỗi món là một câu chuyện, mỗi đĩa là một hành trình</h2>
+        </div>
+    </div>
+
+    <div id="map">
+        <img src="Anh_ban_do.png" alt="Bản đồ Việt Nam" usemap="" style="width:100%;">
+
+<!-- Hà Nội -->
+        <div class="marker" style="top: 19%; left: 33%; ">
+            <div class="marker-popup" style="top: -20px; left: 20px;">
+                <a href="https://tranvanthang978.github.io/H-N-i/"><b>HÀ <br> NỘI</b></a>
+            </div>
+        </div>
+
+<!-- Lai Châu -->
+        <div class="marker" style="top: 11%; left: 13%; ">
+            <div class="marker-popup" style="top: -20px; left: 20px;">
+                <a href="https://thao2004thao.github.io/LaiChau/"><b>LAI CHÂU</b></a>
+            </div>
+        </div>
+
+<!-- Điện Biên -->
+        <div class="marker" style="top: 14%; left: 11%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/DienBien/"><b>ĐIỆN BIÊN</b></a>
+            </div>
+        </div>      
+
+<!-- Lào Cai -->
+        <div class="marker" style="top: 11%; left: 20%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/LaoCai/"><b>LÀO CAI</b></a>
+            </div>
+        </div>
+
+<!-- Sơn La-->
+        <div class="marker" style="top: 18%; left: 20%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/SonLa/"><b>SƠN LA</b></a>
+            </div>
+        </div>
+
+<!-- Yên Bái -->
+        <div class="marker" style="top: 15%; left: 23%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/YenBai/"><b>YÊN BÁI</b></a>
+            </div>
+        </div>
+
+<!-- Hà Giang -->
+        <div class="marker" style="top: 8.5%; left: 26%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/H-Giang/"><b>HÀ GIANG</b></a>
+            </div>
+        </div>
+
+<!-- Phú Thọ -->
+        <div class="marker" style="top: 17%; left:28%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/PhuTho/"><b>PHÚ <br>THỌ</b></a>
+            </div>
+        </div>
+
+<!-- Cao Bằng -->
+        <div class="marker" style="top: 8.5%; left: 33%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/Cao-B-ng/"><b>CAO BẰNG</b></a>
+            </div>
+        </div>
+
+<!-- Tuyên Quang -->
+        <div class="marker" style="top: 12%; left: 28%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/Tuy-n-Quangg"><b>TUYÊN <br> QUANG</a>
+            </div>
+        </div>
+
+<!-- Bắc Kạn -->
+        <div class="marker" style="top: 12%; left: 33%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/B-c-Kan/"><b>BẮC KẠN</b></a>
+            </div>
+        </div>
+
+<!-- Thái Nguyên -->
+        <div class="marker" style="top: 15%; left: 34%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/Th-i-Nguy-n/"><b>THÁI <br> NGUYÊN</b></a>
+            </div>
+        </div>
+
+<!-- Vĩnh Phúc -->
+        <div class="marker" style="top: 16.7%; left: 32%;">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/V-nh-Phuc/" ><b>VĨNH <br> PHÚC</b></a>
+            </div>
+        </div>
+
+<!-- Lạng Sơn -->
+        <div class="marker" style="top: 14.5%; left: 40%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/L-ng-S-n/"><b>LẠNG SƠN</b></a>
+            </div>
+        </div>
+
+<!-- Bắc Giang -->
+        <div class="marker" style="top: 17.3%; left: 39%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/B-c-Giang/"><b>BẮC GIANG</b></a>
+            </div>
+        </div>
+
+<!-- Bắc Ninh -->
+        <div class="marker" style="top: 18.5%; left: 36%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/B-c-Ninh/"><b>BẮC NINH</b></a>
+            </div>
+        </div>
+
+<!-- Quảng Ninh -->
+        <div class="marker" style="top: 18%; left: 45%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/Qu-ng-Ninh/"><b>QUẢNG NINH</b></a>
+            </div>
+        </div>
+
+<!-- Hải Phòng -->
+        <div class="marker" style="top: 21%; left: 40%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/H-i-Ph-ng/"><b>HẢI PHÒNG</b></a>
+            </div>
+        </div>
+
+<!-- Hải Dương -->
+        <div class="marker" style="top: 20%; left: 38%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/HaiDuong/"><b>HẢI DƯƠNG</b></a>
+            </div>
+        </div>
+
+<!-- Thái Bình -->
+        <div class="marker" style="top: 22.5%; left: 39%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/Th-i-B-nh/"><b>THÁI BÌNH</b></a>
+            </div>
+        </div>
+
+<!-- Hưng Yên -->
+        <div class="marker" style="top: 20.5%; left: 35%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/H-ng-Y-n/"><b>HƯNG YÊN</b></a>
+            </div>
+        </div>
+
+<!-- Nam Định -->
+        <div class="marker" style="top: 24%; left: 38%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/Nam-nh/"><b>NAM ĐỊNH</b></a>
+            </div>
+        </div>
+
+ <!-- Hà Nam -->
+        <div class="marker" style="top: 21.5%; left: 35%; ">
+            <div class="marker-popup">
+                <a href="https://tranvanthang978.github.io/H-Nam/"><b>HÀ <br> NAM</b></a>
+            </div>
+        </div>
+
+<!-- Hòa Bình -->
+        <div class="marker" style="top: 21%; left: 29%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/HoaBinh/"><b>HÒA BÌNH</b></a>
+            </div>
+        </div>
+
+<!-- Ninh Bình -->
+        <div class="marker" style="top:24%; left: 35%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/NinhBinh/"><b>NINH <br> BÌNH</b></a>
+            </div>
+        </div>
+
+<!-- Thanh Hóa -->
+        <div class="marker" style="top: 25%; left: 30%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/ThanhHoa/"><b>THANH <br> HÓA</b></a>
+            </div>
+        </div>
+
+<!-- Nghệ An -->
+        <div class="marker" style="top: 30%; left: 25%; ">
+            <div class="marker-popup" style="top: -20px; left: 20px;">
+                <a href="https://thao2004thao.github.io/NgheAn/"><b>NGHỆ AN</b></a>
+            </div>
+        </div>
+
+<!-- Hà Tĩnh -->
+        <div class="marker" style="top: 35%; left: 30%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/HaTinh/"><b>HÀ TĨNH</b></a>
+            </div>
+        </div>
+
+<!-- Quảng Bình -->
+        <div class="marker" style="top: 40%; left: 38%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/QuangBinh/"><b>QUẢNG <br> BÌNH</b></a>
+            </div>
+        </div>
+
+<!-- Quảng Trị -->
+        <div class="marker" style="top: 45%; left: 42%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/QuangTri/"><b>QUẢNG <br> TRỊ</b></a>
+            </div>
+        </div>
+
+<!-- Thừa Thiên Huế -->
+        <div class="marker" style="top: 47%; left: 46%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/ThuaThienHue/"><b>THỪA <br>THIÊN HUẾ</b></a>
+            </div>
+        </div>
+
+<!-- Đà Nẵng -->
+        <div class="marker" style="top: 790px; left: 590px; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/DaNang/"><b>ĐÀ NẴNG</b></a>
+            </div>
+        </div>
+
+<!-- Quảng Nam -->
+        <div class="marker" style="top: 52%; left: 49%; ">
+            <div class="marker-popup">
+                <a href="https://thao2004thao.github.io/QuangNam/"><b>QUẢNG NAM</b></a>
+            </div>
+        </div>
+
+<!-- Quảng Ngãi -->
+        <div class="marker" style="top: 55%; left: 56%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/QuangNgai/"><b>QUẢNG <br> NGÃI</b></a>
+            </div>
+        </div>
+
+<!-- Kon Tum -->
+        <div class="marker" style="top: 57%; left: 50%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/KonTum/"><b>KON TUM</b></a>
+            </div>
+        </div>
+
+<!-- Bình Định -->
+        <div class="marker" style="top: 60%; left: 60%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/BinhDinh/"><b>BÌNH <br> ĐỊNH</b></a>
+            </div>
+        </div>
+
+<!-- Gia Lai -->
+        <div class="marker" style="top: 62%; left:53%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/GiaLai/"><b>GIA LAI</b></a>
+            </div>
+        </div>
+
+<!-- Đắk Lắk -->
+        <div class="marker" style="top: 68%; left: 53%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/DakLak/"><b>ĐẮK LẮK</b></a>
+            </div>
+        </div>
+
+<!-- Phú Yên -->
+        <div class="marker" style="top: 65%; left: 61%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/PhuYen/"><b>PHÚ <br> YÊN</b></a>
+            </div>
+        </div>
+
+<!-- Đắk Nông -->
+        <div class="marker" style="top: 70%; left: 49%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/DacNong/"><b>ĐẮK <br> NÔNG</b></a>
+            </div>
+        </div>
+
+<!-- Khánh Hòa -->
+        <div class="marker" style="top: 71%; left: 60%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/KhanhHoa/"><b>KHÁNH <br> HÒA</b></a>
+            </div>
+        </div>
+
+<!-- Lâm Đồng -->
+        <div class="marker" style="top: 74%; left: 53%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/LamDong/"><b>LÂM ĐỒNG</b></a>
+            </div>
+        </div>
+
+<!-- Ninh Thuận -->
+        <div class="marker" style="top: 74%; left: 59%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/NinhThuan/"><b>NINH <br> THUẬN</b></a>
+            </div>
+        </div>
+
+<!-- Bình Thuận -->
+        <div class="marker" style="top: 79%; left: 50%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/BinhThuan/"><b>BÌNH THUẬN</b></a>
+            </div>
+        </div>
+
+<!-- Bình Phước -->
+        <div class="marker" style="top: 75%; left: 42%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/BinhPhuoc/"><b>BÌNH <br> PHƯỚC</b></a>
+            </div>
+        </div>
+
+<!-- Đồng Nai -->
+        <div class="marker" style="top: 79%; left: 45%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/DongNai/"><b>ĐỒNG <br> NAI</b></a>
+            </div>
+        </div>
+
+<!-- Tây Ninh -->
+        <div class="marker" style="top: 76%; left: 36%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/TayNinh/"><b>TÂY <br> NINH</b></a>
+            </div>
+        </div>
+
+<!-- Bình Dương -->
+        <div class="marker" style="top: 78%; left: 40%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/BinhDuong/"><b>BÌNH <br> DƯƠNG</b></a>
+            </div>
+        </div>
+
+<!-- TP. Hồ Chí Minh -->
+        <div class="marker" style="top: 80%; left: 41%;">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/SaiGon/"><b> TP.HỒ <br> CHÍ <br> MINH</b></a>
+            </div>
+        </div>
+
+<!-- Vũng Tàu -->
+        <div class="marker" style="top: 81%; left: 45%; ">
+            <div class="marker-popup">
+                <a href="https://mynguyen133.github.io/BaRia/"><b>VŨNG <br> TÀU</b></a>
+            </div>
+        </div>
+
+<!-- Long An -->
+        <div class="marker" style="top: 81%; left: 35%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/LongAn/"><b>LONG AN</b></a>
+            </div>
+        </div>
+
+<!-- Đồng Tháp -->
+        <div class="marker" style="top: 82%; left: 32%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/DongThap/"><b>ĐỒNG <br> THÁP</b></a>
+            </div>
+        </div>
+
+<!-- Tiền Giang -->
+        <div class="marker" style="top: 82%; left: 36%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/TienGiang/"><b>TIỀN <br> GIANG</b></a>
+            </div>
+        </div>
+
+<!-- Bến Tre -->
+        <div class="marker" style="top: 84%; left: 38%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/B-n-Tre/"><b>BẾN TRE</b></a>
+            </div>
+        </div>
+
+<!-- Vĩnh Long -->
+        <div class="marker" style="top: 84%; left: 35%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/VinhLong/"><b>VĨNH <br> LONG</b></a>
+            </div>
+        </div>
+
+<!-- Trà Vinh -->
+        <div class="marker" style="top: 86%; left: 37%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/TraVinh/"><b>TRÀ VINH</b></a>
+            </div>
+        </div>
+
+<!-- An Giang -->
+        <div class="marker" style="top: 82%; left: 25%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/AnGiang/"><b>AN GIANG</b></a>
+            </div>
+        </div>
+
+<!-- Cần Thơ -->
+        <div class="marker" style="top: 84%; left: 30%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/CanTho/"><b>CẦN <br> THƠ</b></a>
+            </div>
+        </div>
+
+<!-- Kiên Giang -->
+        <div class="marker" style="top: 85%; left: 27%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/HauGiang/"><b>KIÊN <br> GIANG</b></a>
+            </div>
+        </div>
+
+<!-- Hậu Giang -->
+        <div class="marker" style="top: 86%; left: 31%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/HauGiang/"><b>HẬU <br> GIANG</b></a>
+            </div>
+        </div>
+
+<!-- Sóc Trăng -->
+        <div class="marker" style="top: 88%; left: 33%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/SocTrang/"><b>SÓC TRĂNG</b></a>
+            </div>
+        </div>
+
+<!-- Bạc Liêu -->
+        <div class="marker" style="top: 89% ; left: 30%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/BacLieu/"><b>BẠC LIÊU</b></a>
+            </div>
+        </div>
+
+<!-- Cà Mau -->
+        <div class="marker" style="top: 90%; left: 27%; ">
+            <div class="marker-popup">
+                <a href="https://j-a-g-e-r.github.io/CaMau/"><b>CÀ <br>MAU</b></a>
+            </div>
+        </div>
+
+
+    </div>
+    <hr>
+    <div id="footer">
+        <div class="footer1">
+            <img src="Logo.png" width="10%" height="10%" style="padding-top: 2%; float: left">
+            <h3>VNFOODS</h3>
+            <p>Được thành lập bởi nhiều thành viên của nhóm 2 môn Thực tập cơ sở ngành của Trường Đại học Công Nghiệp Hà Nội.</p>
+            <p>Hotline: 09xxxxxxxx</p>
+            <p>Email: vnfoods@gmail.com</p>
+        </div>
+
+      
+      
+    </div>
+</body>
+</html>

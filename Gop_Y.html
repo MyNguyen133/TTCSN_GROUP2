@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mục góp ý nhỏooo</title>
+    <style>
+/*Phần đầu*/
+        #header{
+            height: 60px;
+            background-color: rgb(209, 46, 46);
+            color: white;
+            letter-spacing: 5px;
+            font-family:cursive;
+            padding-left: 5%;
+            box-sizing: border-box;
+            clear: both; 
+            width: 100%; 
+        }
+
+ /*Phần thân */
+        #ngang{
+            margin-top: 5%;
+            box-sizing: border-box;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #menu{
+            width: 30%;
+            float: left;
+        }
+        #menu li{
+            list-style-type: ">  ";
+            line-height: 60px;
+        }
+        #menu a{
+            text-decoration: none;
+            color: black;
+        }
+        #menu a:hover{
+            color: blue;
+            text-decoration: underline;
+        }
+
+
+        .form-row{
+            float: left;
+            padding-left: 20px;
+            border-left: 1.5px solid rgb(217, 215, 215);
+            line-height: 70px;
+        }
+
+        .form-row .form-right select, input{
+            height: 40px;
+            width: 300px;
+            border: 3px solid grey;   
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+
+        
+/*Phần chân*/
+        #footer{
+            clear: both;
+            text-align: center;
+            padding: 10%;
+            padding-bottom: 0%;
+        }
+    </style>
+
+    <script>
+         document.getElementById('feedback').addEventListener('gui', function(e) {
+            e.preventDefault();
+
+            const type = document.getElementById('type').value;
+            const tieude = document.getElementById('tieude').value;
+            const email = document.getElementById('email').value;
+            const noidung = document.getElementById('noidung').value;
+
+            const body = `Type: ${type}\nTieude: ${tieude}\nEmail: ${email}\nNoidung: ${noidung}`;
+
+            window.location.href = `mailto:vnfoods@gmail.com?&body=${encodeURIComponent(body)}`;
+
+         })
+    </script>
+</head>
+<body>
+    <div id="header">
+        <h1>VNFOODS</h1>
+    </div>
+
+    <div id="ngang">
+        <div id="menu">
+            <ul>
+                <li><a href="Trang_Chu.html">TRANG CHỦ</a></li>
+                <li><a href="Gioi_Thieu.html">GIỚI THIỆU</a></li>
+                <li><a href="Gop_Y.html">GÓP Ý</a></li>
+                <li><a href="Huong_Dan.html">HƯỚNG DẪN</a></li>
+            </ul>
+        </div>
+
+        <div class="form-row">
+            <form id="feedback">
+            <div class="form-right">
+                <b>Danh mục góp ý</b> <br>
+                <select class="form-control" name="Type" id="type">
+                    <option value="0"></option>
+                    <option value="1">Giao diện người dùng</option>
+                    <option value="4">Nội dung</option>
+                    <option value="5">Ý tưởng</option>
+                    <option value="6">Ý kiến riêng(Khác)</option>
+                </select>   
+            </div>
+
+            <div class="form-right">
+                <b>Tiêu đề</b> <br>
+                <input type="text" id="tieude" name="tieude" required></span>
+            </div>
+
+            <div class="form-right">
+                <b>Email</b><br>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="form-right">
+                <b>Nội dung: </b> <br>
+                <textarea id="noidung" name="noidung" rows="5" required></textarea>
+            </div>
+            <button type="gui">Gửi</button>
+        </div>
+    </form>
+    </div>
+    
+    <div id="footer">
+        Copyright <strong>@VNFoods</strong>
+    </div>
+
+</body>
+</html>
